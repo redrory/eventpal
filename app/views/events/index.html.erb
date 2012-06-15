@@ -1,0 +1,39 @@
+<div class = "container-fluid">
+	<div class = "row-fluid">
+		<div class = "center hero-unit">
+			<h1>Event Pal</h1>
+		</div>
+
+
+				<h4>
+					Plan a great event in minutes!
+				</h4>
+
+				<div class="row">
+
+						<div id = "form">
+							<h1>Get Started</h1>
+							<%= form_for @event do |e| %>
+								<ol>
+									<li><%= e.text_field :name ,:placeholder => "Event Name"%></li>
+									<li><%= e.text_field :location ,:placeholder => "Where will be?"%></li>
+									<li><%= e.date_select :date , :discard_year => true ,:use_short_month => true %></li>
+									<li><%= e.time_select :time , :minute_step => 30 %></li>
+									<li><%= e.submit "Create Event", :class => 'btn btn-large btn-info'%></li>
+								</ol>
+							<% end %>
+
+					</div>
+
+						<!--
+        	<div class="span3">
+          	<h2>Why?</h2>
+	           <ol>
+	           	<li>FREE</li>
+	           	<li>Email and Phone call reminders to people carrying items</li>
+	           </ol>
+        </div>
+      </div>-->
+
+		</div>
+</div>
