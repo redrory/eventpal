@@ -6,11 +6,9 @@
 	<h4>Step One - Create Food list</h4>
 		<div id = "food_form">
   		<%= form_for @food do |f| %>
-  			<ol>
-  				<li><%= f.text_field :name, :placeholder => "Food name" %></li>
-  				<li><%= f.number_field :amount, :placeholder => "# needed" %></li>
-  				<li><%= f.number_field :price, :placeholder => "$$" %></li>
-  			</ol>	
+  			<%= f.text_field :name, :placeholder => "Food name" %>
+  			<%= f.number_field :amount, :placeholder => "# needed" %>
+  			<%= f.number_field :price, :placeholder => "$$" %>
   		<% end %>
   	</div>
 
