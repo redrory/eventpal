@@ -3,8 +3,16 @@
 </h4>
 
 <div = "container" >
-
-  1.) Create Food list
+	<h4>Step One - Create Food list</h4>
+		<div id = "food_form">
+  		<%= form_for @food do |f| %>
+  			<ol>
+  				<li><%= f.text_field :name, :placeholder => "Food name" %></li>
+  				<li><%= f.number_field :amount, :placeholder => "# needed" %></li>
+  				<li><%= f.number_field :price, :placeholder => "$$" %></li>
+  			</ol>	
+  		<% end %>
+  	</div>
 
   2.) Create Item List
 
