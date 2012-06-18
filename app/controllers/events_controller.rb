@@ -1,7 +1,12 @@
 class EventsController < ApplicationController
   def create
   	#render :layout => "app"
-  	@food = Food.new
+    Event.create params[:event]
+    Food.create params[:food]
+
+    @food = Food.new
+    @event = Event.last
+
   end
 
   def show

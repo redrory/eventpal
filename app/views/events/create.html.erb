@@ -1,5 +1,5 @@
 <h4>
-  The finer details
+    <%= @event.name %> | <%=@event.location %>
 </h4>
 
 <div = "container" >
@@ -9,6 +9,7 @@
   			<%= f.text_field :name, :placeholder => "Food name" %>
   			<%= f.number_field :amount, :placeholder => "# needed" %>
   			<%= f.number_field :price, :placeholder => "$$" %>
+        <%= f.submit %>
   		<% end %>
   		<%= link_to "Add another", "#" %>
   	</div>
