@@ -2,10 +2,16 @@ class EventsController < ApplicationController
   def create
   	#render :layout => "app"
     Event.create params[:event]
-    Food.create params[:food]
+    
 
     @food = Food.new
     @event = Event.last
+  end
+
+  def create_food
+    @food = Food.new
+    Food.create params[:food]
+    #redirect_to events_create_path
 
   end
 
