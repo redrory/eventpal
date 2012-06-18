@@ -3,7 +3,7 @@
 </h4>
 
 <div = "container" >
-	<h4>Step One - Create Food list</h4>
+	<h4><%=link_to "Step One - Create Food list","#", :id => "food_slider" %></h4>
 		<div id = "food_form">
   		<%= form_for @food do |f| %>
   			<%= f.text_field :name, :placeholder => "Food name" %>
@@ -18,3 +18,10 @@
   3.) Assign Duties
 
 </div>
+
+    <script>
+      $('#food_slider').click(function() {
+        $('#food_form').slideDown('slow');
+        console.log('click slider');
+      });
+    </script>

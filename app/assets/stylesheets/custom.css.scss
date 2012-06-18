@@ -29,11 +29,16 @@ h4 {
 }
 
 
-#form, #food_form{
+#form, {
 	 text-align: center;
-
-
 }
+
+#food_form{
+  display: none;
+  text-align: center;
+}
+
+
 
 ol, ul {
   list-style: none;
