@@ -7,6 +7,7 @@ class EventsController < ApplicationController
 
     @food = Food.new
     @event = Event.last
+
   end
 
   def create_food
