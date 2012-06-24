@@ -1,5 +1,7 @@
 Eventpal::Application.routes.draw do
 
+  devise_for :users
+
   post "events/create_food"
 
   get "events/create"
