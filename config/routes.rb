@@ -10,6 +10,7 @@ Eventpal::Application.routes.draw do
 
   resources :events
   resources :foods
+  resources :users
 
   root :to => 'events#index'
 

@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   def create
   	#render :layout => "app"
     Event.create params[:event]
+    @user = User.new
     
 
     @food = Food.new
@@ -13,6 +14,12 @@ class EventsController < ApplicationController
     Food.create params[:food]
     #redirect_to events_create_path
 
+  end
+
+  def save
+    User.create params[:user]
+    #@event = Event.find(params[:event][:user_id])
+    #@event 
   end
 
   def show

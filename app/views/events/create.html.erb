@@ -14,6 +14,11 @@
   		<%= link_to "Add another", "#" %>
   	</div>
 
+    <%= form_for @user do |u| %>
+      <%= u.text_field :email, :placeholder => "Email" %>
+      <%= u.text_field :password, :placeholder => "Password" %>
+      <%= u.submit "Create Account" %>
+    <% end %>
   2.) Create Item List
 
   3.) Assign Duties
