@@ -2,10 +2,12 @@ Eventpal::Application.routes.draw do
 
   devise_for :users, :controllers => {:confirmations => 'confirmations'}
 
-  devise_scope :user do
-    put "/confirm" => "confirmations#confirm"
-  end
+devise_scope :user do
+  put "/confirm" => "confirmations#confirm"
+end
   
+  get "/confirm" => "confirmations#show"
+
   get "confirmations/show"
 
   get "confirmations/confirm"
