@@ -12,15 +12,22 @@
 						<li><%= e.text_field :location ,:placeholder => "Where will be?"%></li>
 						<li><%= e.date_select :date , :discard_year => true ,:use_short_month => true %></li>
 						<li><%= e.number_field :time , :minute_step => 30, :placeholder => "What time will it start?" %></li>
-
+						<% end %>	
 						<div id	= "create-slider" >
 							<%= link_to "Create Event" , "#", :id => "slider",:class => 'btn btn-large btn-info' %>
 						</div>
 
 						<div id	= "new-slider" >
-							<li><%= e.text_field :name, :placeholder => "What's your email?" %> <%= e.submit "Go!", :class => 'btn btn-large btn-info'%></li>
+							<li><%#= e.text_field :name, :placeholder => "What's your email?" %> <%#= e.submit "Go!", :class => 'btn btn-large btn-info'%></li>
+							<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+							  <%= devise_error_messages! %>
+							  <div>
+							  	<%= f.email_field :email , :placeholder => "you_email@email.com"%>
+								</div>
+							  <div><%= f.submit "Sign up" %></div>
+							<% end %>
 					</ol>
-				<% end %>	
+				
 		</div>
 
 		<script>
@@ -31,3 +38,8 @@
 			});
 		</script>
 </div>
+
+
+
+
+
